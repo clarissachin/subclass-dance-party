@@ -40,10 +40,10 @@ BlinkyDancer.prototype.step = function(timeBetweenSteps) {
   console.log(this); 
   this.$node.toggle(); 
   console.log(this.$node); 
-  /*setTimeout(function() {
+  setTimeout(function() {
     console.log('this is now', this);
     BlinkyDancer.prototype.step.call(this, timeBetweenSteps);
-  }, timeBetweenSteps); */
+  }, timeBetweenSteps); 
 };
 
 /*var timeBetweenSteps = 100;
