@@ -15,11 +15,9 @@ Dancer.prototype.setPosition = function (top, left) {
 };
 
 Dancer.prototype.step = function (timeBetweenSteps) {
-  console.log('this is', this);
+//  console.log('this is', this);
   var temp = this;
-  console.log('temp is before setTimeout:', temp);
   setTimeout(function() { 
-    console.log('temp is now:', temp);
     temp.step.call(temp, timeBetweenSteps);
   }, timeBetweenSteps);
 }; 
