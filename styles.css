@@ -21,12 +21,23 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  /*border:10px solid red;
   border-radius:10px;
-  position:absolute;
+  position:absolute;*/
+  position: sticky;
+  content: url('http://dressacat.com/chat.png');
+  height: 300px;
 }
 .blinky{
-  border:10px solid blue;
+  border:10px solid yellow;
   border-radius:10px;
   position:absolute;
+  /*position: sticky;
+  content: url('http://dressacat.com/chat.png');
+  height: 300px;*/
 }
+.fast {
+  position: sticky;
+  content: url('https://s-media-cache-ak0.pinimg.com/originals/b4/6e/1b/b46e1bf9a0a196ec96750024066122a1.gif');
+  height: 200px;
+};

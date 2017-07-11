@@ -34,15 +34,18 @@ $(document).ready(function() {
 
   $('.fadeThem').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
+      console.log('window.dancers[i].$node is', window.dancers[i].$node);
       window.dancers[i].$node.fadeToggle();
     }
   });
 
   $('.slideDown').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].$node.slideDown();
+      window.dancers[i].$node.slideToggle();
     }
   });
-  
+
+  var bkgdUrl = 'https://s-media-cache-ak0.pinimg.com/originals/0c/aa/bc/0caabc1720999ea9c056156654d6631d.jpg';
+  $('body').css('background-image', 'url("' + bkgdUrl + '")');
 });
 

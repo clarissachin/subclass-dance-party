@@ -17,3 +17,19 @@ BlinkyDancer.prototype.step = function(timeBetweenSteps) {
     object.step.call(object, timeBetweenSteps);
   }, timeBetweenSteps); 
 };
+
+
+class Matt extends Dancer {
+  constructor(top, left) {
+    super()
+    this.$node = $('<span class="matt"></span>')
+    console.log(this.$node)
+  }
+  step(timeBetweenSteps) {
+  //super.step()
+    this.$node.toggle()
+    setTimeout(this.step, timeBetweenSteps) 
+  }
+}
+var matt = new Matt(10, 20, 100);
+console.log(matt);
