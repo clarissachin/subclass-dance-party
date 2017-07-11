@@ -81,13 +81,11 @@ Dancer.prototype.setPosition = function () {
 };
 
 Dancer.prototype.step = function (timeBetweenSteps) {
-  setTimeout(function() {
-  this.prototype.step(timeBetweenSteps);
+  // var temp = this;
+  setTimeout(function() { 
+    Dancer.prototype.step.call(this, timeBetweenSteps);
   }, timeBetweenSteps);
-};
+}; 
 
-/*var matt = new Dancer ($("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000);
-
-console.log('matt is', matt); */
+//matt.ste(params);
+/*var matt = new Dancer ($("body").height() * Math.random(), $("body").width() * Math.random(), Math.random() * 1000); console.log('matt is', matt); */

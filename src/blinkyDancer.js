@@ -36,9 +36,14 @@ BlinkyDancer.prototype.constructor = BlinkyDancer;
 //BlinkyDancer.prototype.oldStep = Dancer.prototype.step;
 
 BlinkyDancer.prototype.step = function(timeBetweenSteps) {
-  //debugger;
   Dancer.prototype.step(timeBetweenSteps);
-  this.$node.toggle();
+  console.log(this); 
+  this.$node.toggle(); 
+  console.log(this.$node); 
+  /*setTimeout(function() {
+    console.log('this is now', this);
+    BlinkyDancer.prototype.step.call(this, timeBetweenSteps);
+  }, timeBetweenSteps); */
 };
 
 /*var timeBetweenSteps = 100;
