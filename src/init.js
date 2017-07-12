@@ -52,6 +52,10 @@ $(document).ready(function() {
     Dancer.prototype.lineUp();
   });
 
+  $('.hover').on('mouseover', function(event) {
+    
+  });
+
   var bkgdUrl = 'https://s-media-cache-ak0.pinimg.com/originals/0c/aa/bc/0caabc1720999ea9c056156654d6631d.jpg';
   $('body').css('background-image', 'url("' + bkgdUrl + '")');
 });
