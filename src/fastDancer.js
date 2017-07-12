@@ -3,7 +3,6 @@ var Fast = function (top, left, timeBetweenSteps) {
   this.$node = $('<span class="fast"></span>');
   Fast.prototype.step.call(this, timeBetweenSteps);
   this.setPosition(top, left);
-  window.dancers.push(this);
 };
 
 Fast.prototype = Object.create(Dancer.prototype);
@@ -20,5 +19,6 @@ Fast.prototype.step = function(timeBetweenSteps) {
   }, 1000); 
 };
 
-
-
+Fast.prototype.lineUp = function() {
+  $(".fast").css("top", "90%");
+};

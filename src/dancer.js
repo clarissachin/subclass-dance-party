@@ -1,6 +1,6 @@
 var Dancer = function (top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
-  this.$node.css('content: url("http://dressacat.com/chat.png")');
+  this.$node.css({content: 'url(http://dressacat.com/chat.png)'});
   Dancer.prototype.setPosition.call(this, top, left);
   Dancer.prototype.step(timeBetweenSteps);
   window.dancers.push(this);
@@ -22,3 +22,7 @@ Dancer.prototype.step = function (timeBetweenSteps) {
     temp.step.call(temp, timeBetweenSteps);
   }, timeBetweenSteps);
 }; 
+
+Dancer.prototype.lineUp = function() {
+  $(".dancer").css("left", "10%");
+};
